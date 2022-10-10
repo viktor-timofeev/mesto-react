@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import logoPath from './images/header-logo.svg';
 
 function App() {
