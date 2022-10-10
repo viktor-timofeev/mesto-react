@@ -1,5 +1,5 @@
 import React from 'react';
-import logoPath from '../images/header__logo.svg';
+import logoPath from '../images/header-logo.svg';
 
 function Header() {
   return (
