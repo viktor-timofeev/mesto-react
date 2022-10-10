@@ -9,10 +9,7 @@ function App() {
 <Header />
 <Main />
 <Footer />
-
-  
-
-  
+ 
 
   <div className="popup popup_function_edit popup_type_light">
     <div className="popup__container popup__container_size_small">
