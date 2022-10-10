@@ -1,0 +1,57 @@
+.profile__photo-edit-button {
+  height: 127.5px;
+  width: 127.5px;
+  border-radius: 50%;
+  margin: 0 20.6px 0 0;
+  background-size: cover;
+  z-index: 5;
+  background: transparent;
+  position: absolute;
+}
+
+  @media screen and (max-width: 910px) {
+    .profile__photo-edit-button {
+      margin: 0 auto 22.25px;
+    }
+  }
+
+  /*.profile__photo-edit-button::before {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+  }*/
+
+  .profile__photo-edit-button:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, .8);
+    transition: .3s;
+  }
+
+ /* .profile__photo-edit-button:hover::before {
+    border-radius: 5px solid red;
+    background: rgba(0, 0, 0, .8);
+    transition: .3s;
+  }*/
+
+  .profile__photo-edit-button:hover::after {
+    opacity: 100%;
+    background-image: url(../../../images/pencil.svg);
+  }
+
+  .profile__photo-edit-button::after {
+    border-radius: 5px solid red;
+    background: transparent;
+    background-size: contain;
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in;
+    content: "";
+  }

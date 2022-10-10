@@ -1,12 +1,13 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import logoPath from './images/header-logo.svg';
 
 function App() {
   return (
     <body className="page">
 
   <header className="header">
-    <div className="header__logo"></div>
+    <img className="header__logo" alt="Лого" src={logoPath}/>
   </header>
 
   <main className="content">

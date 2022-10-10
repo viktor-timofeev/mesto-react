@@ -1,0 +1,15 @@
+.popup__container_size_large {
+  max-width: 856px;
+  min-width: 473px;
+  margin-top: 50px;
+  max-height: 602px;
+}
+
+  @media screen and (max-width: 910px) {
+    .popup__container_size_large {
+      margin: 100px auto 0;
+      min-width: 0;
+      max-width: 240px;
+  }
+}
+

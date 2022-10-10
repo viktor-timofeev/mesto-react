@@ -1,0 +1,23 @@
+.elements__trash_hidden {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-image: url(../../../../images/trash.svg);
+  width:  18px;
+  height: 19px;
+  margin: 20px 20px 0 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: default;
+  transition: .2s;
+}
+
+.elements__trash_hidden:hover {
+  cursor: pointer;
+  opacity: .6;
+}
