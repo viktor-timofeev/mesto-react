@@ -73,6 +73,16 @@ function App() {
 
 </body>
   );
+
+  function handleEditAvatarClick() {
+    document.querySelector(".popup_function_edit-photo").classList.add("popup_opened");
+  }
+  function handleEditProfileClick() {
+    document.querySelector(".popup_function_edit").classList.add("popup_opened");
+  }
+  function handleAddPlaceClick() {
+    document.querySelector(".popup_function_add").classList.add("popup_opened");
+  }
 }
 
 export default App;
