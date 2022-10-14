@@ -5,14 +5,33 @@ import Footer from './Footer';
 import ImagePopup from './ImagePopup';
 
 function App() {
-  return (
-    <body className="page">
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
+  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
+  const [isEditAvatarPopupOpen, setIsisEditAvatarPopupOpen] = React.useState(false);
+  
+function handleEditAvatarClick() {
+  setIsisEditAvatarPopupOpen(true);
+}
+function handleEditProfileClick() {
+  setIsEditProfilePopupOpen(true);
+}
+function handleAddPlaceClick() {
+  setIsisEditAvatarPopupOpen(true);
+}
+
+return (
+  <div className="App">
+  
 <Header />
-<Main />
+<Main
+onEditProfile = {handleEditProfileClick}
+onEditAvatar = {handleEditAvatarClick}
+onAddPlace = {handleAddPlaceClick}
+/>
 <Footer />
  
 
-  <div className="popup popup_function_edit popup_type_light">
+{/*  <div className="popup popup_function_edit popup_type_light">
     <div className="popup__container popup__container_size_small">
       <button className="popup__close-button" type="button"></button>
       <form className="popup__form popup__form_function_edit popup__form_height_big" name="touristProfile" method="post" novalidate>
@@ -71,7 +90,7 @@ function App() {
 
   <ImagePopup/>
 
-</body>
+</div>
   );
 
   function handleEditAvatarClick() {
@@ -83,6 +102,7 @@ function App() {
   function handleAddPlaceClick() {
     document.querySelector(".popup_function_add").classList.add("popup_opened");
   }
-}
-
+}*/}
+</div>
+)}
 export default App;

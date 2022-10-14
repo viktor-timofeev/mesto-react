@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Main() {
+function Main({onEditProfile, onEditAvatar, onAddPlace}) {
   return (
     <main className="content">
 
@@ -8,17 +8,17 @@ function Main() {
       <div className="profile__item">
         <div className="profile__edit-image">
         <img className="profile__image" alt="" src="<%=require('./images/avatar.jpg')%>" id="id-avatar"/>
-        <button className="profile__photo-edit-button" onClick={props.handleEditAvatarClick} type="button"></button>
+        <button className="profile__photo-edit-button" onClick={onEditAvatar} type="button"></button>
         </div>
         <div className="profile__info">
           <div className="profile__title-block">
             <h1 className="profile__title" id="id-name">Жак-Ив Кусто</h1>
-            <button className="profile__edit-button" onClick={props.handleEditProfileClick} type="button"></button>
+            <button className="profile__edit-button" onClick={onEditProfile} type="button"></button>
           </div>
           <p className="profile__subtitle" id="id-about">Исследователь океана</p>
         </div>
       </div>
-      <button className="profile__add-button" onClick={props.handleAddPlaceClick} type="button"></button>
+      <button className="profile__add-button" onClick={onAddPlace} type="button"></button>
     </section>
 
     <section className="elements">
