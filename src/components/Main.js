@@ -2,7 +2,7 @@ import React from 'react';
 import avatarPath from '../images/avatar.jpg'; 
 import PopupWithForm from './PopupWithForm';
 
-function Main({onEditAvatar, onEditProfile, onAddPlace}) {
+function Main(props) {
   return (
     <main className="content">
 
