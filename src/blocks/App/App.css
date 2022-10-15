@@ -1,0 +1,15 @@
+.App {
+  background-color: #000000;
+  min-width: 320px;
+  max-width: 1280px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 45px auto 60px;
+}
+
+  @media screen and (max-width: 910px) {
+    .App {
+      margin: 28px auto 36px;
+    }
+  }
