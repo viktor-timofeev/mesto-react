@@ -43,11 +43,11 @@ onAddPlace = {handleAddPlaceClick}
                 onCLose={closeAllPopups}>
   {
 
-<>  <input id="name" className="popup__input popup__input_type_title" name="name" placeholder="Имя" value=""
+<>  <input id="name" className="popup__input popup__input_type_title" name="name" placeholder="Имя" defaultValue=""
     type="text" minlength="2" maxlength="40" required/>
     <span id="name-error" className="popup__input-error name-error"></span>
     <input id="about" className="popup__input popup__input_type_subtitle" name="about"
-    placeholder="О себе" value="" type="text" minlength="2" maxlength="200" required/>
+    placeholder="О себе" defaultValue="" type="text" minlength="2" maxlength="200" required/>
     <span id="about-error" className="popup__input-error about-error"></span>
 </>
 }
@@ -61,10 +61,10 @@ onAddPlace = {handleAddPlaceClick}
 {
 <>
 <input id="title" className="popup__input popup__input_type_name" name="title" placeholder="Название"
-value="" type="text" minlength="2" maxlength="30" required/>
+defaultValue="" type="text" minlength="2" maxlength="30" required/>
 <span id="title-error" className="popup__input-error title-error"></span>
 <input id="link" className="popup__input popup__input_type_link" name="link"
-placeholder="Ссылка на картинку" value="" type="url" required/>
+placeholder="Ссылка на картинку" defaultValue="" type="url" required/>
 <span id="link-error" className="popup__input-error link-error"></span>
 </>
 }
@@ -78,7 +78,7 @@ placeholder="Ссылка на картинку" value="" type="url" required/>
 {
 <>
 <input id="link" className="popup__input popup__input_type_link" name="link"
-placeholder="Ссылка на картинку" value="" type="url" required/>
+placeholder="Ссылка на картинку" defaultValue="" type="url" required/>
 <span id="link-error" className="popup__input-error link-error"></span>
 </>
 }
