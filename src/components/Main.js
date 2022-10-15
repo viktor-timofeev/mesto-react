@@ -1,4 +1,5 @@
 import React from 'react';
+import avatarPath from '../images/avatar.jpg'; 
 
 function Main({onEditProfile, onEditAvatar, onAddPlace}) {
   return (
@@ -7,7 +8,7 @@ function Main({onEditProfile, onEditAvatar, onAddPlace}) {
     <section className="profile">
       <div className="profile__item">
         <div className="profile__edit-image">
-        <img className="profile__image" alt="" src="<%=require('./images/avatar.jpg')%>" id="id-avatar"/>
+        <img className="profile__image" alt="" /*src="<%=require('./images/avatar.jpg')%>"*/ src={avatarPath} id="id-avatar"/>
         <button className="profile__photo-edit-button" onClick={onEditAvatar} type="button"></button>
         </div>
         <div className="profile__info">
