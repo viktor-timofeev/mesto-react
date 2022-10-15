@@ -41,8 +41,6 @@ onAddPlace = {handleAddPlaceClick}
     <input id="about" className="popup__input popup__input_type_subtitle" name="about"
     placeholder="О себе" value="" type="text" minlength="2" maxlength="200" required/>
     <span id="about-error" className="popup__input-error about-error"></span>
-    <button className="popup__submit-button popup__submit-button_type_inactive" type="submit"
-    disabled>Сохранить</button>
 </>
 }
  </PopupWithForm> 
