@@ -20,6 +20,13 @@ function handleAddPlaceClick() {
   setIsAddPlacePopupOpen(true);
 }
 
+function closeAllPopups() {
+  setIsisEditAvatarPopupOpen(false);
+  setIsEditProfilePopupOpen(false);
+  setIsAddPlacePopupOpen(false);
+
+}
+
 return (
   <div className="App">
   
@@ -32,7 +39,8 @@ onAddPlace = {handleAddPlaceClick}
 <Footer />
 <PopupWithForm name="edit"
                 title="Редактировать профиль"
-                isOpen={isEditProfilePopupOpen}>
+                isOpen={isEditProfilePopupOpen}
+                onCLose={closeAllPopups}>
   {
 
 <>  <input id="name" className="popup__input popup__input_type_title" name="name" placeholder="Имя" value=""
@@ -47,7 +55,8 @@ onAddPlace = {handleAddPlaceClick}
 
  <PopupWithForm name="add"
                 title="Новое место"
-                isOpen={isAddPlacePopupOpen}>
+                isOpen={isAddPlacePopupOpen}
+                onCLose={closeAllPopups}>
 
 {
 <>
@@ -63,7 +72,8 @@ placeholder="Ссылка на картинку" value="" type="url" required/>
 
  <PopupWithForm name="edit-photo"
                 title="Обновить аватар"
-                isOpen={isEditAvatarPopupOpen}>
+                isOpen={isEditAvatarPopupOpen}
+                onCLose={closeAllPopups}>
 
 {
 <>
