@@ -17,7 +17,7 @@ function handleEditProfileClick() {
   setIsEditProfilePopupOpen(true);
 }
 function handleAddPlaceClick() {
-  setIsisEditAvatarPopupOpen(true);
+  setIsAddPlacePopupOpen(true);
 }
 
 return (
