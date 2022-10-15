@@ -44,8 +44,9 @@ function Main(props) {
       <button className="profile__add-button" onClick={props.onAddPlace} type="button"></button>
     </section>
 
-    <section className="elements">
-      <template className="elements-item">
+    {cards.map((card, i) => (
+      // Важный атрибут: key
+      <div key={card.id}>
         <div className="elements__element">
           <button className="elements__trash" type="button"></button>
           <img className="elements__image"
@@ -59,8 +60,8 @@ function Main(props) {
           </div>
           </div>
         </div>
-      </template>
-    </section>
+      </div>
+    ))}
 
   </main> 
  
