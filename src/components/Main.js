@@ -6,6 +6,7 @@ function Main(props) {
   const [userName,  setUserName] = React.useState('');
   const [userDescription, setUserDescription] = React.useState('');
   const [userAvatar, setUserAvatar] = React.useState('');
+  const [cards, setCards] = React.useState([]);
 
   React.useEffect(() => {
     api.getUserInfo()
@@ -14,7 +15,13 @@ function Main(props) {
       setUserDescription(data.about);
       setUserAvatar(data.avatar);
     })
-    .catch(error => console.log(`Ошибка при добавлении карточки: ${error}`))
+    .catch(error => console.log(`Ошибка при обновлении информации профиля: ${error}`))
+    
+    api.getInitialCards()
+    .then((data) => {
+      setCards(data);
+    })
+    .catch(error => console.log(`Ошибка при добавлении карточек: ${error}`))
     })
 
   return (
