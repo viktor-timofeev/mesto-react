@@ -43,7 +43,7 @@ function Main(props) {
       </div>
       <button className="profile__add-button" onClick={props.onAddPlace} type="button"></button>
     </section>
-
+    <section class="elements">
     {cards.map((card, i) => (
       // Важный атрибут: key
       <div key={card.id}>
@@ -62,7 +62,7 @@ function Main(props) {
         </div>
       </div>
     ))}
-
+</section>
   </main> 
  
   );
