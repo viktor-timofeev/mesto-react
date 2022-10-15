@@ -30,7 +30,7 @@ onEditAvatar = {handleEditAvatarClick}
 onAddPlace = {handleAddPlaceClick}
 />
 <Footer />
-<PopupWithForm name="profile"
+<PopupWithForm name="edit"
                 title="Редактировать профиль"
                 isOpen={isEditProfilePopupOpen}>
   {
@@ -47,9 +47,25 @@ onAddPlace = {handleAddPlaceClick}
 }
  </PopupWithForm> 
 
- <PopupWithForm name="card"
+ <PopupWithForm name="add"
                 title="Новое место"
                 isOpen={isAddPlacePopupOpen}>
+
+{
+<>
+<input id="title" className="popup__input popup__input_type_name" name="title" placeholder="Название"
+value="" type="text" minlength="2" maxlength="30" required/>
+<span id="title-error" className="popup__input-error title-error"></span>
+<input id="link" className="popup__input popup__input_type_link" name="link"
+placeholder="Ссылка на картинку" value="" type="url" required/>
+<span id="link-error" className="popup__input-error link-error"></span>
+</>
+}
+</PopupWithForm> 
+
+ <PopupWithForm name="edit-photo"
+                title="Обновить аватар"
+                isOpen={isEditAvatarPopupOpen}>
 
 {
 <>
