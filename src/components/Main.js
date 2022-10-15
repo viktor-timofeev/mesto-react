@@ -8,7 +8,7 @@ function Main(props) {
   const [userAvatar, setUserAvatar] = React.useState('');
 
   React.useEffect(() => {
-    api.getUserInfo
+    api.getUserInfo()
     .then((data) => {
       setUserName(data.name);
       setUserDescription(data.about);
