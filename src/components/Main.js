@@ -1,15 +1,29 @@
-import React from 'react';
-import avatarPath from '../images/avatar.jpg'; 
+import React from 'react'; 
 import PopupWithForm from './PopupWithForm';
+import api from '../utils/Api';
 
 function Main(props) {
+  const [userName,  setUserName] = React.useState('');
+  const [userDescription, setUserDescription] = React.useState('');
+  const [userAvatar, setUserAvatar] = React.useState('');
+
+  React.useEffect(() => {
+    api.getUserInfo
+    .then((data) => {
+      setUserName(data.name);
+      setUserDescription(data.about);
+      setUserAvatar(data.avatar);
+    })
+    .catch(error => console.log(`Ошибка при добавлении карточки: ${error}`))
+    })
+
   return (
     <main className="content">
 
     <section className="profile">
       <div className="profile__item">
         <div className="profile__edit-image">
-        <img className="profile__image" alt="" /*src="<%=require('./images/avatar.jpg')%>"*/ src={avatarPath} id="id-avatar"/>
+        <img className="profile__image" alt="" style={{ backgroundImage: `url(${userAvatar})` }} id="id-avatar"/>
         <button className="profile__photo-edit-button" onClick={props.onEditAvatar} type="button"></button>
         </div>
         <div className="profile__info">
