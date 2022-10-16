@@ -50,13 +50,12 @@ function Main(props) {
         <div className="elements__element">
           <button className="elements__trash" type="button"></button>
           <img className="elements__image"
-            src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt=" "
-            data-type="auto"/>
+          style={{ backgroundImage: `url(${card.link})` }} alt="" data-type="auto"/>
           <div className="elements__group">
-            <h2 className="elements__title"></h2>
+            <h2 className="elements__title">{card.name}</h2>
             <div className="elements__like-group">
             <button className="elements__like" type="button"></button>
-            <p className="elements__like-number"></p>
+            <p className="elements__like-number">{card.likes.length}</p>
           </div>
           </div>
         </div>
