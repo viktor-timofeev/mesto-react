@@ -1,6 +1,6 @@
 import React from 'react'; 
-import PopupWithForm from './PopupWithForm';
 import api from '../utils/Api';
+import Card from './Card';
 
 function Main(props) {
   const [userName,  setUserName] = React.useState('');
@@ -43,30 +43,13 @@ function Main(props) {
       </div>
       <button className="profile__add-button" onClick={props.onAddPlace} type="button"></button>
     </section>
-    <section class="elements">
-    {cards.map((card, i) => (
-      // Важный атрибут: key
-      <div key={card.id}>
-        <div className="elements__element">
-          <button className="elements__trash" type="button"></button>
-          <img className="elements__image"
-          style={{ backgroundImage: `url(${card.link})` }} alt="" data-type="auto"/>
-          <div className="elements__group">
-            <h2 className="elements__title">{card.name}</h2>
-            <div className="elements__like-group">
-            <button className="elements__like" type="button"></button>
-            <p className="elements__like-number">{card.likes.length}</p>
-          </div>
-          </div>
-        </div>
-      </div>
-    ))}
-</section>
-  </main> 
- 
+    <section className="elements">
+    {cards.map((card) => (<Card key={card._id} card={card} onCardClick={props.onCardClick}/>
+    ))
+    }
+    </section>
+  </main>  
   );
-
-  
 }
 
 export default Main;
