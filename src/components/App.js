@@ -9,6 +9,7 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   const [isEditAvatarPopupOpen, setIsisEditAvatarPopupOpen] = React.useState(false);
+  const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState({});
   
 function handleEditAvatarClick() {
@@ -40,6 +41,7 @@ return (
 onEditProfile = {handleEditProfileClick}
 onEditAvatar = {handleEditAvatarClick}
 onAddPlace = {handleAddPlaceClick}
+onCardClick = {handleCardClick}
 />
 <Footer />
 <PopupWithForm name="edit"
@@ -89,9 +91,10 @@ placeholder="Ссылка на картинку" defaultValue="" type="url" requ
 }
 </PopupWithForm>
 
-<ImagePopup>
+<ImagePopup
   card = {selectedCard}
-  onCLose = {closeAllPopups}
+  isOpen={isImagePopupOpen}
+  onClose = {closeAllPopups}>
 </ImagePopup>
 </div>
 )}
