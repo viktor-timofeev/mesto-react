@@ -15,7 +15,7 @@ function Main(props) {
       setUserDescription(data.about);
       setUserAvatar(data.avatar);
     })
-    .catch(error => console.log(`Ошибка при обновлении информации профиля: ${error}`))
+    .catch(error => console.log(`Ошибка при обновлении информации профиля: ${error}`));
     
     api.getInitialCards()
     .then((data) => {
