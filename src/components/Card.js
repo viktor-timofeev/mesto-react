@@ -1,11 +1,10 @@
 import React from 'react';
-import closeIconPath from '../images/close-icon.svg'
 
 function Card(props) {
   return (
       <div key={props.id}>
         <div className="elements__element">
-          <button className="elements__trash" type="button" style={{ backgroundImage: {closeIconPath} }}></button>
+          <button className="elements__trash_visible" type="button"></button>
           <img className="elements__image"
           style={{ backgroundImage: `url(${props.card.link})` }} onClick={props.onCardClick} alt="" data-type="auto"/>
           <div className="elements__group">
