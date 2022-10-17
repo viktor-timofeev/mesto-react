@@ -26,11 +26,11 @@ function closeAllPopups() {
   setIsisEditAvatarPopupOpen(false);
   setIsEditProfilePopupOpen(false);
   setIsAddPlacePopupOpen(false);
-
+  setSelectedCard({});
 }
 
-function handleCardClick(selectedCard) {
-  setSelectedCard(selectedCard)
+function handleCardClick(cardSel) {
+  setSelectedCard(cardSel)
 }
 
 return (
