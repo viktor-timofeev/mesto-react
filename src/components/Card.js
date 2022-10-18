@@ -1,12 +1,16 @@
 import React from 'react';
 
 function Card(props) {
+  function handleClick() {
+    props.onCardClick(props.card);
+  } 
+
   return (
       <div key={props.id}>
         <div className="elements__element">
           <button className="elements__trash_visible" type="button"></button>
           <img className="elements__image"
-          style={{ backgroundImage: `url(${props.card.link})` }} onClick={props.onCardClick} alt="" data-type="auto"/>
+          style={{ backgroundImage: `url(${props.card.link})` }} onClick={handleClick} alt="" data-type="auto"/>
           <div className="elements__group">
             <h2 className="elements__title">{props.card.name}</h2>
             <div className="elements__like-group">
