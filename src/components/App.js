@@ -9,7 +9,6 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   const [isEditAvatarPopupOpen, setIsisEditAvatarPopupOpen] = React.useState(false);
-  const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState({});
   
 function handleEditAvatarClick() {
@@ -95,6 +94,7 @@ placeholder="Ссылка на картинку" defaultValue="" type="url" requ
   card = {selectedCard}
   isOpen={isImagePopupOpen}
   onClose = {closeAllPopups}>
+  onCardClick = {handleCardClick}
 </ImagePopup>
 </div>
 )}
