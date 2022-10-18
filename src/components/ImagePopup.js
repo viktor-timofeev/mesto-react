@@ -7,9 +7,8 @@ function ImagePopup(props) {
       <button className="popup__close-button" type="button" onClick={props.onCLose}></button>
       <img className="popup__image" 
       style={{ backgroundImage: `url(${props.card.link})` }}
-      src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg"
         alt="" data-type="auto"/>
-      <h2 className="popup__image-caption"></h2>
+      <h2 className="popup__image-caption">{props.card.name}</h2>
     </div>
   </div> 
   );
