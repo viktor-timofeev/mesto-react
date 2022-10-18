@@ -28,8 +28,8 @@ function closeAllPopups() {
   setSelectedCard({});
 }
 
-function handleCardClick(cardSel) {
-  setSelectedCard(cardSel)
+function handleCardClick(name, link) {
+  setSelectedCard({opened: true, name, link})
 }
 
 return (
