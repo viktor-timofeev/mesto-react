@@ -92,8 +92,8 @@ placeholder="Ссылка на картинку" defaultValue="" type="url" requ
 
 <ImagePopup
   card = {selectedCard}
-  onClose = {closeAllPopups}>
-</ImagePopup>
+  onClose = {closeAllPopups}
+/>
 </div>
 )}
 
