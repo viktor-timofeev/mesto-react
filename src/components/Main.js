@@ -24,7 +24,6 @@ function Main(props) {
   
     .catch(error => console.log(`Ошибка при добавлении карточек: ${error}`))
     });
-  }
 
   return (
     <main className="content">
@@ -51,6 +50,8 @@ function Main(props) {
     </section>
   </main>  
   );
+
+}
 
 
 export default Main;
