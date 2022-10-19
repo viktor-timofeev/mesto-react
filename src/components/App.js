@@ -37,8 +37,7 @@ function closeAllPopups() {
 
 
 return (
-  <div className="page">
-  
+<div className="page">
 <Header />
 <Main
 onEditProfile = {handleEditProfileClick}
