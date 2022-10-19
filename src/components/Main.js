@@ -45,7 +45,7 @@ function Main({onEditProfile, onEditAvatar, onAddPlace, onCardClick}) {
       <button className="profile__add-button" onClick={onAddPlace} type="button"></button>
     </section>
     <section className="elements">
-    {cards.map(_id, ...props => <Card key={_id} props onCardClick={onCardClick}/>
+    {cards.map((_id, ...props) => <Card key={_id} props onCardClick={onCardClick}/>
     )}
     </section>
   </main>  
