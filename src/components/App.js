@@ -13,12 +13,11 @@ function App() {
 
 
   const [selectedCard, setSelectedCard] = React.useState({});
-  function handleCardClick(cardSel) {
-    setSelectedCard(cardSel);
-    setIsImagePopupOpen(true);
 
+  function handleCardClick(card) {
+    setSelectedCard(card);
+    setIsImagePopupOpen(true);
   }
-  
   
 function handleEditAvatarClick() {
   setIsisEditAvatarPopupOpen(true);
@@ -34,9 +33,8 @@ function closeAllPopups() {
   setIsisEditAvatarPopupOpen(false);
   setIsEditProfilePopupOpen(false);
   setIsAddPlacePopupOpen(false);
-  setSelectedCard({});
+  setIsImagePopupOpen(false);
 }
-
 
 return (
 <div className="page">
@@ -97,8 +95,8 @@ placeholder="Ссылка на картинку" defaultValue="" type="url" requ
 
 <ImagePopup
   card = {selectedCard}
-  onClose = {closeAllPopups}
   isOpen = {isImagePopupOpen}
+  onClose = {closeAllPopups}
 />
 </div>
 )}
