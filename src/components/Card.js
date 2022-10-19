@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card(props) {
+const Card = (props) => {
 
   const handleCardClick = () => {
     props.onCardClick(props.card.name, props.card.link);
