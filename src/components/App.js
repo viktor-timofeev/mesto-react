@@ -8,19 +8,20 @@ import PopupWithForm from './PopupWithForm';
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setIsisEditAvatarPopupOpen] = React.useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
   const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
 
 
+  //Card.js
   const [selectedCard, setSelectedCard] = React.useState({});
-
   function handleCardClick(card) {
-    setSelectedCard(card);
-    setIsImagePopupOpen(true);
+    setSelectedCard(card)
+    setIsImagePopupOpen(true)
   }
   
+  
 function handleEditAvatarClick() {
-  setIsisEditAvatarPopupOpen(true);
+  setIsEditAvatarPopupOpen(true);
 }
 function handleEditProfileClick() {
   setIsEditProfilePopupOpen(true);
@@ -30,11 +31,12 @@ function handleAddPlaceClick() {
 }
 
 function closeAllPopups() {
-  setIsisEditAvatarPopupOpen(false);
+  setIsEditAvatarPopupOpen(false);
   setIsEditProfilePopupOpen(false);
   setIsAddPlacePopupOpen(false);
   setIsImagePopupOpen(false);
 }
+
 
 return (
 <div className="page">
@@ -53,10 +55,10 @@ onCardClick = {handleCardClick}
   {
 
 <>  <input id="name" className="popup__input popup__input_type_title" name="name" placeholder="Имя" defaultValue=""
-    type="text" minlength="2" maxlength="40" required/>
+    type="text" minLength="2" maxLength="40" required/>
     <span id="name-error" className="popup__input-error name-error"></span>
     <input id="about" className="popup__input popup__input_type_subtitle" name="about"
-    placeholder="О себе" defaultValue="" type="text" minlength="2" maxlength="200" required/>
+    placeholder="О себе" defaultValue="" type="text" minLength="2" maxLength="200" required/>
     <span id="about-error" className="popup__input-error about-error"></span>
 </>
 }
@@ -70,7 +72,7 @@ onCardClick = {handleCardClick}
 {
 <>
 <input id="title" className="popup__input popup__input_type_name" name="title" placeholder="Название"
-defaultValue="" type="text" minlength="2" maxlength="30" required/>
+defaultValue="" type="text" minLength="2" maxLength="30" required/>
 <span id="title-error" className="popup__input-error title-error"></span>
 <input id="link" className="popup__input popup__input_type_link" name="link"
 placeholder="Ссылка на картинку" defaultValue="" type="url" required/>
@@ -96,7 +98,7 @@ placeholder="Ссылка на картинку" defaultValue="" type="url" requ
 <ImagePopup
   card = {selectedCard}
   onClose = {closeAllPopups}
-  isOpen = {isImagePopupOpen}
+  isOpen={isImagePopupOpen}
 />
 </div>
 )}
