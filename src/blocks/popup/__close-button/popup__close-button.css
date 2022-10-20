@@ -10,17 +10,17 @@
   border: none;
   font: inherit;
   color: inherit;
-  background-color: rgba(28,28,28,0);
+  background-color: rgba(28, 28, 28, 0);
 }
 
 .popup__close-button:hover {
-  opacity: .6;
-  cursor: pointer;	
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-  @media screen and (max-width: 910px) {
-    .popup__close-button {
-      width: 20px;
-      height: 20px;
-    }
+@media screen and (max-width: 910px) {
+  .popup__close-button {
+    width: 20px;
+    height: 20px;
   }
+}

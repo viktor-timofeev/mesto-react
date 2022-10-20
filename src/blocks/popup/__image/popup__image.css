@@ -9,11 +9,11 @@
   object-fit: cover;
 }
 
-  @media screen and (max-width: 910px) {
-    .popup__image {
-      margin: 16px 0 0 0;
-      min-width: 0;
-      max-width: 240px;
-      max-height: 299px;
-    }
+@media screen and (max-width: 910px) {
+  .popup__image {
+    margin: 16px 0 0 0;
+    min-width: 0;
+    max-width: 240px;
+    max-height: 299px;
   }
+}

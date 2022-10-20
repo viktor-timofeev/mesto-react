@@ -6,9 +6,8 @@
   background-size: cover;
 }
 
-  @media screen and (max-width: 910px) {
-    .profile__image {
-      margin: 0 auto 22.25px;
-    }
+@media screen and (max-width: 910px) {
+  .profile__image {
+    margin: 0 auto 22.25px;
   }
-
+}

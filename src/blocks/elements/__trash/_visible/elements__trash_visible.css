@@ -4,7 +4,7 @@
   right: 0;
   z-index: 10;
   background-image: url(../../../../images/trash.svg);
-  width:  18px;
+  width: 18px;
   height: 19px;
   margin: 20px 20px 0 0;
   padding: 0;
@@ -13,10 +13,10 @@
   color: inherit;
   background-color: rgba(0, 0, 0, 0);
   cursor: default;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .elements__trash_visible:hover {
   cursor: pointer;
-  opacity: .6;
+  opacity: 0.6;
 }

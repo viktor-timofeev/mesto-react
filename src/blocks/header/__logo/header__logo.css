@@ -1,18 +1,18 @@
 .header__logo {
-    background-image: url(../../../images/header-logo.svg);
-    min-width: 142px;
-    min-height: 33px;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../../../images/header-logo.svg);
+  min-width: 142px;
+  min-height: 33px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .header__logo:hover {
-  opacity: .5;
-}  
+  opacity: 0.5;
+}
 
-  @media screen and (max-width: 910px) {
-    .header__logo {
-      min-width: 103.74px;
-      min-height: 24.4px;
-    }
+@media screen and (max-width: 910px) {
+  .header__logo {
+    min-width: 103.74px;
+    min-height: 24.4px;
   }
+}

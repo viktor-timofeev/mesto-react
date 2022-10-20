@@ -6,29 +6,28 @@
   border: none;
   font: inherit;
   background-color: black;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 2px;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .popup__submit-button_type_active:hover {
-  opacity: .8;
-  cursor: pointer;	
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-  @media screen and (max-width: 910px) {
-    .popup__submit-button_type_active {
-      min-width: 238px;
-      min-height: 46px;
-      font-size: 14px;
-      line-height: 17px;
-      margin-top: 15px;
-    }
+@media screen and (max-width: 910px) {
+  .popup__submit-button_type_active {
+    min-width: 238px;
+    min-height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 15px;
   }
-
+}

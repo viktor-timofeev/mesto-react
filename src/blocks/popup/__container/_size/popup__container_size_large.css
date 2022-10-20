@@ -5,11 +5,10 @@
   max-height: 602px;
 }
 
-  @media screen and (max-width: 910px) {
-    .popup__container_size_large {
-      margin: 100px auto 0;
-      min-width: 0;
-      max-width: 240px;
+@media screen and (max-width: 910px) {
+  .popup__container_size_large {
+    margin: 100px auto 0;
+    min-width: 0;
+    max-width: 240px;
   }
 }
-

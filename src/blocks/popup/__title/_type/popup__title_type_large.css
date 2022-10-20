@@ -2,9 +2,8 @@
   margin: 0 0 50px;
 }
 
-  @media screen and (max-width: 910px) {
-    .popup__title_type_large {
-      margin-bottom: 75px;
-    }
+@media screen and (max-width: 910px) {
+  .popup__title_type_large {
+    margin-bottom: 75px;
   }
-
+}

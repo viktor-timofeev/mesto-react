@@ -12,16 +12,16 @@
 }
 
 .profile__edit-button:hover {
-  opacity: .6;
+  opacity: 0.6;
   cursor: pointer;
 }
 
-  @media screen and (max-width: 910px) {
-    .profile__edit-button {
-      margin: 0 0 6px 10px;
-      align-self: end;
-      min-height: 18px;
-      min-width: 18px;
-      background-size: cover;
-    }
+@media screen and (max-width: 910px) {
+  .profile__edit-button {
+    margin: 0 0 6px 10px;
+    align-self: end;
+    min-height: 18px;
+    min-width: 18px;
+    background-size: cover;
   }
+}

@@ -2,10 +2,8 @@
   height: 330px;
 }
 
-
-  @media screen and (max-width: 910px) {
-    .popup__form_height_big {
-      height: 322px;
-    }
+@media screen and (max-width: 910px) {
+  .popup__form_height_big {
+    height: 322px;
   }
-
+}

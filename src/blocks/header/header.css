@@ -11,17 +11,15 @@
   margin: 0 auto 36.25px;
 }
 
-  @media screen and (max-width: 910px) {
-    .header {
-        padding: 0 24px 31.6px;
-    }
+@media screen and (max-width: 910px) {
+  .header {
+    padding: 0 24px 31.6px;
   }
-  
-  @media screen and (max-width: 910px) {
-    .header {
-      padding: 0 0 31.6px 27px;
-      margin-bottom: 38.25px;
-    }
-  }
+}
 
-  
+@media screen and (max-width: 910px) {
+  .header {
+    padding: 0 0 31.6px 27px;
+    margin-bottom: 38.25px;
+  }
+}
