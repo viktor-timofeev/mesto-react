@@ -28,18 +28,7 @@ function Main(props) {
   }
 
   React.useEffect(() => {
-    api
-      .getUserInfo()
-      .then((data) => {
-        setUserName(data.name);
-        setUserDescription(data.about);
-        setUserAvatar(data.avatar);
-      })
-      .catch((error) =>
-        console.log(`Ошибка при обновлении информации профиля: ${error}`)
-      );
-
-    api
+      api
       .getInitialCards()
       .then((data) => {
         setCards(data);
