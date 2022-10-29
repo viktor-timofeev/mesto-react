@@ -4,6 +4,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 import ImagePopup from "./ImagePopup";
 import PopupWithForm from "./PopupWithForm";
+import { Api } from "../../../mesto/src/components/Api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import { CardContext } from "../contexts/CardContext";
 
@@ -17,7 +18,7 @@ function App() {
   const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
 
   React.useEffect(() => {
-    api
+    Api
       .getUserInfo()
       .then((data) => {
         setСurrentUser(data);
