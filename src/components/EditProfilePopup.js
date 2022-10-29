@@ -1,15 +1,22 @@
 import React from "react";
 
-export const EditProfilePopup = (props) => {
+const EditProfilePopup = (props) => {
+  const [name, setName] = React.useState("");
+  const [description, setDescription] = React.useState("");
+
+  function handleChange(e) {
+    setName(e.target.value);
+    setDescription(e.target.value);
+  }
   
-
-
   return (
     <div name="edit" title="Редактировать профиль">
         {
           <>
             <input
               id="name"
+              value={name}
+              onChange={handleChange}
               className="popup__input popup__input_type_title"
               name="name"
               placeholder="Имя"
@@ -25,6 +32,8 @@ export const EditProfilePopup = (props) => {
             ></span>
             <input
               id="about"
+              value={description}
+              onChange={handleChange}
               className="popup__input popup__input_type_subtitle"
               name="about"
               placeholder="О себе"
