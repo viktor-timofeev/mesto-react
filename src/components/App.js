@@ -53,7 +53,6 @@ function App() {
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
-    <CardContext.Provider value={card}>
     <div className="page">
       <Header />
       <Main
@@ -177,7 +176,6 @@ function App() {
         isOpen={isImagePopupOpen}
       />
     </div>
-    </CardContext.Provider>
    </CurrentUserContext.Provider>
   );
 }
