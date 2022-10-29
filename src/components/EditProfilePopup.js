@@ -5,9 +5,7 @@ export const EditProfilePopup = (props) => {
 
 
   return (
-    <PopupWithForm
-        name="edit"
-        title="Редактировать профиль">
+    <div name="edit" title="Редактировать профиль">
         {
           <>
             <input
@@ -42,7 +40,7 @@ export const EditProfilePopup = (props) => {
             ></span>
           </>
         }
-      </PopupWithForm>
+      </div>
   );
 }
 
