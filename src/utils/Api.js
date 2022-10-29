@@ -1,4 +1,4 @@
-class api {
+class Api {
   constructor(setting) {
     this._address = setting.baseUrl;
     this._headers = setting.headers;
