@@ -1,4 +1,4 @@
-class Api {
+class api {
   constructor(setting) {
     this._address = setting.baseUrl;
     this._headers = setting.headers;
@@ -46,6 +46,23 @@ class Api {
       }),
     }).then((res) => this._getResponseData(res));
   }
+
+  changeLikeCardStatus(cardId, isLiked) {
+    if (isLiked) {
+        return fetch(`${this._address}/cards/${cardId}/likes`, {
+          method: "DELETE",
+          headers: this._headers,
+        }).then((res) => this._getResponseData(res));
+      } else {
+      return fetch(`${this._address}/cards/${cardId}/likes`, {
+        method: "PUT",
+        headers: this._headers,
+      }).then((res) => this._getResponseData(res));
+    }
+  }
+    
+    
+  
 
   addLike(cardId) {
     return fetch(`${this._address}/cards/${cardId}/likes`, {

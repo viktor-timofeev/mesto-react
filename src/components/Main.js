@@ -1,12 +1,31 @@
 import React from "react";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import api from "../utils/Api";
 import Card from "./Card";
 
+
+
 function Main(props) {
-  const [userName, setUserName] = React.useState("");
-  const [userDescription, setUserDescription] = React.useState("");
-  const [userAvatar, setUserAvatar] = React.useState("");
+  const currentUser = React.useContext(CurrentUserContext);
   const [cards, setCards] = React.useState([]);
+
+  function handleCardLike(card) {
+    // Снова проверяем, есть ли уже лайк на этой карточке
+    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    
+    // Отправляем запрос в API и получаем обновлённые данные карточки
+    api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
+        setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+    });
+  }
+
+
+  function handleCardDelete(card) {
+    // Отправляем запрос в API и получаем обновлённые данные карточки
+    api.removeCard(card._id).then((newCard) => {
+        setCards((state) => state.filter((c) => c._id === card._id ? newCard : c));
+    });
+  }
 
   React.useEffect(() => {
     api
@@ -38,9 +57,9 @@ function Main(props) {
           <div className="profile__edit-image">
             <img
               className="profile__image"
-              alt={userName}
-              src={userAvatar}
-              style={{ backgroundImage: `url(${userAvatar})` }}
+              alt={currentUser.name}
+              src={currentUser.avatar}
+              style={{ backgroundImage: `url(${currentUser.avatar})` }}
               id="id-avatar"
             />
             <button
@@ -52,7 +71,7 @@ function Main(props) {
           <div className="profile__info">
             <div className="profile__title-block">
               <h1 className="profile__title" id="id-name">
-                {userName}
+                {currentUser.name}
               </h1>
               <button
                 className="profile__edit-button"
@@ -61,7 +80,7 @@ function Main(props) {
               ></button>
             </div>
             <p className="profile__subtitle" id="id-about">
-              {userDescription}
+              {currentUser.description}
             </p>
           </div>
         </div>
@@ -73,7 +92,7 @@ function Main(props) {
       </section>
       <section className="elements">
         {cards.map((card) => (
-          <Card key={card._id} card={card} onCardClick={props.onCardClick} />
+          <Card key={card._id} card={card} onCardClick={props.onCardClick} onCardLike={handleCardLike} onCardDelete={handleCardDelete} />
         ))}
       </section>
     </main>

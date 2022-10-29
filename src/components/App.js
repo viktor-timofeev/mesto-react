@@ -4,14 +4,28 @@ import Main from "./Main";
 import Footer from "./Footer";
 import ImagePopup from "./ImagePopup";
 import PopupWithForm from "./PopupWithForm";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { CardContext } from "../contexts/CardContext";
 
 function App() {
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
-    React.useState(false);
+  const [currentUser, setСurrentUser] = React.useState("");
+  const [card, setCard] = React.useState("");
+
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
-    React.useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
   const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    api
+      .getUserInfo()
+      .then((data) => {
+        setСurrentUser(data);
+      })
+      .catch((error) =>
+        console.log(`Ошибка при обновлении информации профиля: ${error}`)
+      );
+  });
 
   //Card.js
   const [selectedCard, setSelectedCard] = React.useState({});
@@ -38,6 +52,8 @@ function App() {
   }
 
   return (
+    <CurrentUserContext.Provider value={currentUser}>
+    <CardContext.Provider value={card}>
     <div className="page">
       <Header />
       <Main
@@ -161,6 +177,8 @@ function App() {
         isOpen={isImagePopupOpen}
       />
     </div>
+    </CardContext.Provider>
+   </CurrentUserContext.Provider>
   );
 }
 
