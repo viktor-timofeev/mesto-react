@@ -55,7 +55,7 @@ function App() {
   function handleUpdateUser() {
     api.setUserInfo()
       .then((data) => {
-        setСurrentUser(data);
+        setCurrentUser(data);
         })
         closeAllPopups();
       }
