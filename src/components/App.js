@@ -9,7 +9,7 @@ import api from "../utils/Api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function App() {
-  const [currentUser, setСurrentUser] = React.useState("");
+  const [currentUser, setCurrentUser] = React.useState([]);
   const [card, setCard] = React.useState("");
 
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
@@ -21,7 +21,7 @@ function App() {
     api
       .getUserInfo()
       .then((data) => {
-        setСurrentUser(data);
+        setCurrentUser(data);
       })
       .catch((error) =>
         console.log(`Ошибка при обновлении информации профиля: ${error}`)
