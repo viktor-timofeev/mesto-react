@@ -30,7 +30,7 @@ React.useEffect(() => {
   } 
   
   return (
-    <div 
+  /*  <div 
     className={`popup popup_function_edit popup_type_light ${
       props.isOpen ? "popup_opened" : ""
     }`}
@@ -71,9 +71,54 @@ React.useEffect(() => {
               id="about-error"
               className="popup__input-error about-error"
             ></span>
-          </>
-        }
-      </div>
+          </>*/
+
+<div className={`popup popup_function_edit popup_type_light ${
+      props.isOpen ? "popup_opened" : ""
+    }`}>
+<div className="popup__container popup__container_size_small">
+  <button className="popup__close-button" type="button"></button>
+  <form className="popup__form popup__form_function_edit popup__form_height_big" name="touristProfile" method="post" onSubmit="props.onSubmit" novalidate>
+    <h2 className="popup__title popup__title_type_large">Редактировать профиль</h2>
+    <input
+              id="name"
+              value={props.name}
+              onChange={handleChange}
+              className="popup__input popup__input_type_title"
+              name="name"
+              placeholder="Имя"
+              defaultValue=""
+              type="text"
+              minLength="2"
+              maxLength="40"
+              required
+            />
+            <span
+              id="name-error"
+              className="popup__input-error name-error"
+            ></span>
+            <input
+              id="about"
+              value={props.description}
+              onChange={handleChange}
+              className="popup__input popup__input_type_subtitle"
+              name="about"
+              placeholder="О себе"
+              defaultValue=""
+              type="text"
+              minLength="2"
+              maxLength="200"
+              required
+            />
+            <span
+              id="about-error"
+              className="popup__input-error about-error"
+            ></span>
+    <button className="popup__submit-button popup__submit-button_type_inactive" type="submit"
+      disabled>Сохранить</button>
+  </form>
+</div>
+</div>
   );
 }
 
