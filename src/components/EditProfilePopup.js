@@ -35,7 +35,7 @@ React.useEffect(() => {
           <>
             <input
               id="name"
-              value={name}
+              value={props.name}
               onChange={handleChange}
               className="popup__input popup__input_type_title"
               name="name"
@@ -52,7 +52,7 @@ React.useEffect(() => {
             ></span>
             <input
               id="about"
-              value={description}
+              value={props.description}
               onChange={handleChange}
               className="popup__input popup__input_type_subtitle"
               name="about"
