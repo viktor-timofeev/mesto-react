@@ -53,12 +53,11 @@ function App() {
   }
 
   function handleUpdateUser() {
-    api.setUserInfo(data)
+    api.setUserInfo()
       .then((data) => {
         setСurrentUser(data);
-        closeAllPopups();
         })
-        popupWithFormProfileEdit.close();
+        closeAllPopups();
       }
   
 
@@ -74,7 +73,7 @@ function App() {
       />
       <Footer />
       
-      <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onSubmit={props.onSubmit} /> 
+      <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onSubmit={handleUpdateUser} /> 
 
       <PopupWithForm
         name="add"
