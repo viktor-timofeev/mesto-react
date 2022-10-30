@@ -77,8 +77,8 @@ React.useEffect(() => {
       props.isOpen ? "popup_opened" : ""
     }`}>
 <div className="popup__container popup__container_size_small">
-  <button className="popup__close-button" type="button"></button>
-  <form className="popup__form popup__form_function_edit popup__form_height_big" name="touristProfile" method="post" onSubmit="props.onSubmit" novalidate>
+  <button className="popup__close-button" type="button" onClick={props.onClose}></button>
+  <form className="popup__form popup__form_function_edit popup__form_height_big" name="touristProfile" method="post" onSubmit={handleSubmit} novalidate>
     <h2 className="popup__title popup__title_type_large">Редактировать профиль</h2>
     <input
               id="name"
@@ -99,7 +99,7 @@ React.useEffect(() => {
             ></span>
             <input
               id="about"
-              value={props.description}
+              value={props.about}
               onChange={handleChange}
               className="popup__input popup__input_type_subtitle"
               name="about"
