@@ -15,8 +15,11 @@ React.useEffect(() => {
   setDescription(currentUser.about);
 }, [currentUser]); 
 
-  function handleChange(e) {
+  function handleChangeName(e) {
     setName(e.target.value);
+  }
+
+  function handleChangeDescription(e) {
     setDescription(e.target.value);
   }
 
@@ -83,7 +86,7 @@ React.useEffect(() => {
     <input
               id="name"
               value={name}
-              onChange={handleChange}
+              onChange={handleChangeName}
               className="popup__input popup__input_type_title"
               name="name"
               placeholder="Имя"
@@ -100,7 +103,7 @@ React.useEffect(() => {
             <input
               id="about"
               value={description}
-              onChange={handleChange}
+              onChange={handleChangeDescription}
               className="popup__input popup__input_type_subtitle"
               name="about"
               placeholder="О себе"
