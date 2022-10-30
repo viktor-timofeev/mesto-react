@@ -73,7 +73,7 @@ function App() {
       />
       <Footer />
       
-      <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onSubmit={handleUpdateUser} /> 
+      <EditProfilePopup isOpen={handleEditProfileClick} onClose={closeAllPopups} onSubmit={handleUpdateUser} /> 
 
       <PopupWithForm
         name="add"
