@@ -73,7 +73,8 @@ function App() {
       />
       <Footer />
       
-      <EditProfilePopup isOpen={handleEditProfileClick} onClose={closeAllPopups} onSubmit={handleUpdateUser} /> 
+      <EditProfilePopup name="edit"
+        title="Рдактировать профиль" isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onSubmit={handleUpdateUser} /> 
 
       <PopupWithForm
         name="add"
