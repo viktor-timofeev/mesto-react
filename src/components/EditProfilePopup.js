@@ -30,7 +30,11 @@ React.useEffect(() => {
   } 
   
   return (
-    <div name="edit" title="Редактировать профиль">
+    <div 
+    className={`popup popup_function_edit popup_type_light ${
+      props.isOpen ? "popup_opened" : ""
+    }`}
+       name="edit" title="Редактировать профиль">
         {
           <>
             <input
