@@ -52,6 +52,16 @@ function App() {
     setIsImagePopupOpen(false);
   }
 
+  function handleUpdateUser() {
+    api.setUserInfo(data)
+      .then((data) => {
+        setСurrentUser(data);
+        closeAllPopups();
+        })
+        popupWithFormProfileEdit.close();
+      }
+  
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
     <div className="page">
@@ -64,7 +74,7 @@ function App() {
       />
       <Footer />
       
-      <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} /> 
+      <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onSubmit={props.onSubmit} /> 
 
       <PopupWithForm
         name="add"
