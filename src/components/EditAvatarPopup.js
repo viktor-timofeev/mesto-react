@@ -9,6 +9,15 @@ const EditAvatarPopup = (props) => {
   const currentUser = React.useContext(CurrentUserContext);
 
   const avatarLink = React.useRef("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  
+    onUpdateAvatar({
+      avatar: avatarLink,
+    });
+  } 
+
   
   return (
    

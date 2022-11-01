@@ -64,12 +64,11 @@ function App() {
   function handleUpdateAvatar() {
     api.setUserPic()
     .then((data) => {
-      setCurrentUser(data);
-      userInfo.setUserPic({
-      });
-      closeAllPopups();
+      setCurrentUser(data)
     })
-  }
+      closeAllPopups();
+    }
+  
   
 
   return (
