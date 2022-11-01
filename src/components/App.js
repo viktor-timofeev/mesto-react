@@ -59,6 +59,16 @@ function App() {
         })
         closeAllPopups();
       }
+
+  function handleUpdateAvatar() {
+    api.setUserPic()
+    .then((info) => {
+      userInfo.setUserPic({
+        userAvatar: info.avatar
+      });
+      closeAllPopups();
+    })
+  }
   
 
   return (
@@ -115,30 +125,7 @@ function App() {
         }
       </PopupWithForm>
 
-      <PopupWithForm
-        name="edit-photo"
-        title="Обновить аватар"
-        isOpen={isEditAvatarPopupOpen}
-        onCLose={closeAllPopups}
-      >
-        {
-          <>
-            <input
-              id="link"
-              className="popup__input popup__input_type_link"
-              name="link"
-              placeholder="Ссылка на картинку"
-              defaultValue=""
-              type="url"
-              required
-            />
-            <span
-              id="link-error"
-              className="popup__input-error link-error"
-            ></span>
-          </>
-        }
-      </PopupWithForm>
+      <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} onSubmit={handleUpdateAvatar} />
 
       <ImagePopup
         card={selectedCard}
