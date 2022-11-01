@@ -63,9 +63,9 @@ function App() {
 
   function handleUpdateAvatar() {
     api.setUserPic()
-    .then((info) => {
+    .then((data) => {
+      setCurrentUser(data);
       userInfo.setUserPic({
-        userAvatar: info.avatar
       });
       closeAllPopups();
     })

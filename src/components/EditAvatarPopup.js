@@ -9,19 +9,6 @@ const EditAvatarPopup = (props) => {
   const currentUser = React.useContext(CurrentUserContext);
 
   const avatarLink = React.useRef("");
-
-// После загрузки текущего пользователя из API
-// его данные будут использованы в управляемых компонентах.
-React.useEffect(() => {
-  setAvatar(currentUser.avatar);
-}, [currentUser]); 
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    onUpdateAvatar({
-      avatar: avatarLink,
-    });
-  } 
   
   return (
    
