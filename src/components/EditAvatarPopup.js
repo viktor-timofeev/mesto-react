@@ -54,4 +54,4 @@ React.useEffect(() => {
   );
 }
 
-export default EditProfilePopup;
+export default EditAvatarPopup;
