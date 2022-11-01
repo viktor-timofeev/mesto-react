@@ -13,7 +13,7 @@ const EditAvatarPopup = (props) => {
   function handleSubmit(e) {
     e.preventDefault();
   
-    onUpdateAvatar({
+    props.onUpdateAvatar({
       avatar: avatarLink,
     });
   } 
