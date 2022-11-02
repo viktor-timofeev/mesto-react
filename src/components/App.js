@@ -3,7 +3,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import ImagePopup from "./ImagePopup";
-import PopupWithForm from "./PopupWithForm";
+import AddPlacePopup from "./AddPlacePopup";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import api from "../utils/Api";
@@ -91,6 +91,14 @@ function App() {
     })
       closeAllPopups();
     }
+
+    function handleAddPlaceSubmit() {
+    api.addNewCard(data)
+      .then((newCard) => {
+        setCards([newCard, ...cards]); 
+        closeAllPopups();
+      })
+    }
   
   
 
@@ -106,50 +114,13 @@ function App() {
         cards={cards}
         onCardLike={handleCardLike}
         onCardDelete={handleCardDelete}
+        
       />
       <Footer />
       
       <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onSubmit={handleUpdateUser} /> 
 
-      <PopupWithForm
-        name="add"
-        title="Новое место"
-        isOpen={isAddPlacePopupOpen}
-        onCLose={closeAllPopups}
-      >
-        {
-          <>
-            <input
-              id="title"
-              className="popup__input popup__input_type_name"
-              name="title"
-              placeholder="Название"
-              defaultValue=""
-              type="text"
-              minLength="2"
-              maxLength="30"
-              required
-            />
-            <span
-              id="title-error"
-              className="popup__input-error title-error"
-            ></span>
-            <input
-              id="link"
-              className="popup__input popup__input_type_link"
-              name="link"
-              placeholder="Ссылка на картинку"
-              defaultValue=""
-              type="url"
-              required
-            />
-            <span
-              id="link-error"
-              className="popup__input-error link-error"
-            ></span>
-          </>
-        }
-      </PopupWithForm>
+      <AddPlacePopup isOpen={isAddPlacePopupOpen} onCLose={closeAllPopups} onSubmit={handleAddPlaceSubmit}/>
 
       <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} onSubmit={handleUpdateAvatar} />
 
