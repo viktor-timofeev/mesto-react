@@ -38,15 +38,10 @@ function App() {
   React.useEffect(() => {
       api
       .getInitialCards()
-      .then((data) => {
+      .then(data => {
         setCards(data);
       })
-
-      .catch((error) =>
-        console.log(`Ошибка при добавлении карточек: ${error}`)
-      );
-  });
-
+    }, []);
  
 
   React.useEffect(() => {
@@ -55,10 +50,7 @@ function App() {
       .then(data => {
         setCurrentUser(data);
       })
-    }, [])
-      .catch((error) =>
-        console.log(`Ошибка при обновлении информации профиля: ${error}`)
-      );
+    }, []);
 
   //Card.js
  
