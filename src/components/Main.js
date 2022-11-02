@@ -7,13 +7,9 @@ import Card from "./Card";
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);
-  //const [cards, setCards] = React.useState([]);
+  const [cards, setCards] = React.useState([]);
 
- 
-
-
-
-  return (
+   return (
     <main className="content">
       <section className="profile">
         <div className="profile__item">
@@ -54,7 +50,7 @@ function Main(props) {
         ></button>
       </section>
       <section className="elements">
-        {props.cards.map((card) => (
+        {cards.map((card) => (
           <Card key={card._id} card={card} onCardClick={props.onCardClick} onCardLike={props.handleCardLike} onCardDelete={props.handleCardDelete} />
         ))}
       </section>
