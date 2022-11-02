@@ -117,8 +117,7 @@ React.useEffect(() => {
               id="about-error"
               className="popup__input-error about-error"
             ></span>
-    <button className="popup__submit-button popup__submit-button_type_inactive" type="submit"
-      disabled>Сохранить</button>
+    <button className="popup__submit-button popup__submit-button_type_inactive" type="submit">Сохранить</button>
   </form>
 </div>
 </div>

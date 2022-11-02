@@ -1,13 +1,12 @@
 import React from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import api from "../utils/Api";
 import Card from "./Card";
 
 
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);
-  const [card, setCard] = React.useState([]);
+ // const [cards, setCards] = React.useState([]);
 
    return (
     <main className="content">

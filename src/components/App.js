@@ -16,7 +16,7 @@ function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
   const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState({});
-  const [currentUser, setCurrentUser] = React.useState([]);
+  const [currentUser, setCurrentUser] = React.useState({});
   const [cards, setCards] = React.useState("");
 
   function handleCardLike(card) {
@@ -52,13 +52,13 @@ function App() {
   React.useEffect(() => {
     api
       .getUserInfo()
-      .then((data) => {
+      .then(data => {
         setCurrentUser(data);
       })
+    }, [])
       .catch((error) =>
         console.log(`Ошибка при обновлении информации профиля: ${error}`)
       );
-  });
 
   //Card.js
  

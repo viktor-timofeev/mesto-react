@@ -25,9 +25,7 @@ function PopupWithForm(props) {
           {props.children}
           <button
             className="popup__submit-button popup__submit-button_type_inactive"
-            type="submit"
-            disabled
-          >
+            type="submit">
             Сохранить
           </button>
         </form>
