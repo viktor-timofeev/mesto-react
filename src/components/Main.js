@@ -7,7 +7,7 @@ import Card from "./Card";
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);
-  const [cards, setCards] = React.useState([]);
+  const [card, setCard] = React.useState([]);
 
    return (
     <main className="content">
