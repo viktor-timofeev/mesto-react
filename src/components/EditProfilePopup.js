@@ -85,7 +85,7 @@ React.useEffect(() => {
     <h2 className="popup__title popup__title_type_large">Редактировать профиль</h2>
     <input
               id="name"
-              value={name}
+              value={props.name}
               onChange={handleChangeName}
               className="popup__input popup__input_type_title"
               name="name"
@@ -102,7 +102,7 @@ React.useEffect(() => {
             ></span>
             <input
               id="about"
-              value={description}
+              value={props.description}
               onChange={handleChangeDescription}
               className="popup__input popup__input_type_subtitle"
               name="about"
