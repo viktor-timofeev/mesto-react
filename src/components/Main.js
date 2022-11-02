@@ -7,37 +7,11 @@ import Card from "./Card";
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);
-  const [cards, setCards] = React.useState([]);
+  //const [cards, setCards] = React.useState([]);
 
-  function handleCardLike(card) {
-    // Снова проверяем, есть ли уже лайк на этой карточке
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
-    
-    // Отправляем запрос в API и получаем обновлённые данные карточки
-    api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
-        setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-    });
-  }
+ 
 
 
-  function handleCardDelete(card) {
-    // Отправляем запрос в API и получаем обновлённые данные карточки
-    api.removeCard(card._id).then((newCard) => {
-        setCards((state) => state.filter((c) => c._id === card._id ? newCard : c));
-    });
-  }
-
-  React.useEffect(() => {
-      api
-      .getInitialCards()
-      .then((data) => {
-        setCards(data);
-      })
-
-      .catch((error) =>
-        console.log(`Ошибка при добавлении карточек: ${error}`)
-      );
-  });
 
   return (
     <main className="content">
@@ -81,7 +55,7 @@ function Main(props) {
       </section>
       <section className="elements">
         {cards.map((card) => (
-          <Card key={card._id} card={card} onCardClick={props.onCardClick} onCardLike={handleCardLike} onCardDelete={handleCardDelete} />
+          <Card key={card._id} card={card} onCardClick={props.onCardClick} onCardLike={props.handleCardLike} onCardDelete={props.handleCardDelete} />
         ))}
       </section>
     </main>

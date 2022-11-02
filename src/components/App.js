@@ -11,7 +11,37 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function App() {
   const [currentUser, setCurrentUser] = React.useState([]);
-  const [card, setCard] = React.useState("");
+  const [cards, setCards] = React.useState("");
+
+  function handleCardLike(card) {
+    // Снова проверяем, есть ли уже лайк на этой карточке
+    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    
+    // Отправляем запрос в API и получаем обновлённые данные карточки
+    api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
+        setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+    });
+  }
+
+  
+  function handleCardDelete(card) {
+    // Отправляем запрос в API и получаем обновлённые данные карточки
+    api.removeCard(card._id).then((newCard) => {
+        setCards((state) => state.filter((c) => c._id === card._id ? newCard : c));
+    });
+  }
+
+  React.useEffect(() => {
+      api
+      .getInitialCards()
+      .then((data) => {
+        setCards(data);
+      })
+
+      .catch((error) =>
+        console.log(`Ошибка при добавлении карточек: ${error}`)
+      );
+  });
 
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
