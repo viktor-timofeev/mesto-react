@@ -21,8 +21,7 @@ const EditAvatarPopup = (props) => {
   
   return (
    
-<div className={`popup popup_function_edit-photo popup_type_light ${
-      props.isOpen ? "popup_opened" : ""
+<div className={`popup popup_function_edit-photo popup_type_light ${props.isOpen ? "popup_opened" : ""
     }`}>
 <div className="popup__container popup__container_size_small">
   <button className="popup__close-button" type="button" onClick={props.onClose}></button>
@@ -35,8 +34,8 @@ const EditAvatarPopup = (props) => {
           placeholder="Ссылка на картинку"
           defaultValue=""
           type="url"
+          value={avatarLink.current}
           required
-          value={avatarLink}
         />
         <span
           id="link-error"

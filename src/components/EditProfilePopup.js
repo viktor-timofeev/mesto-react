@@ -76,8 +76,7 @@ React.useEffect(() => {
             ></span>
           </>*/
 
-<div className={`popup popup_function_edit popup_type_light ${
-      props.isOpen ? "popup_opened" : ""
+<div className={`popup popup_function_edit popup_type_light ${props.isOpen ? "popup_opened" : ""
     }`}>
 <div className="popup__container popup__container_size_small">
   <button className="popup__close-button" type="button" onClick={props.onClose}></button>
