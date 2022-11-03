@@ -4,7 +4,7 @@ function PopupWithForm(props) {
   return (
     <div
       className={`popup popup_function_${props.name} ${props.isOpen ? "popup_opened" : ""
-      }`}
+        }`}
     >
       <div className="popup__container popup__container_size_small">
         <button
@@ -23,7 +23,7 @@ function PopupWithForm(props) {
           </h2>
           {props.children}
           <button
-            className="popup__submit-button popup__submit-button_type_active"
+            className="popup__submit-button popup__submit-button_type_inactive"
             type="submit">
             Сохранить
           </button>
