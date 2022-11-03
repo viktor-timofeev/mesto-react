@@ -32,9 +32,8 @@ const EditAvatarPopup = (props) => {
           className="popup__input popup__input_type_link"
           name="link"
           placeholder="Ссылка на картинку"
-          defaultValue=""
+          defaultValue={avatarLink.current}
           type="url"
-          value={avatarLink.current}
           required
         />
         <span
