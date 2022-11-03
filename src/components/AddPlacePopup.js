@@ -20,7 +20,7 @@ const AddPlacePopup = (props) => {
   <div className={`popup popup_function_add popup_type_light ${props.isOpen ? "popup_opened" : ""}`}>
   <div className="popup__container popup__container_size_small">
     <button className="popup__close-button" type="button" onClick={props.onClose}></button>
-    <form className="popup__form popup__form_function_add popup__form_height_big" name="newCard" method="post" onSubmit={handleSubmit} novalidate>
+    <form className="popup__form popup__form_function_add popup__form_height_big" name="newCard" method="post" onSubmit={handleSubmit} noValidate>
       <h2 class="popup__title popup__title_type_large">Новое место</h2>
       <input
         id="title"
