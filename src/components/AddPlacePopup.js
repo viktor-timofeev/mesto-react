@@ -50,7 +50,7 @@ const AddPlacePopup = (props) => {
         id="link-error"
         className="popup__input-error link-error"
       ></span>
-       <button className="popup__submit-button popup__submit-button_type_inactive" type="submit">Создать</button>
+       <button className="popup__submit-button popup__submit-button_type_active" type="submit">Создать</button>
      </form>
     </div>
   </div>

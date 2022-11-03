@@ -33,49 +33,7 @@ React.useEffect(() => {
   } 
   
   return (
-  /*  <div 
-    className={`popup popup_function_edit popup_type_light ${
-      props.isOpen ? "popup_opened" : ""
-    }`}
-       name="edit" title="Редактировать профиль">
-        {
-          <>
-            <input
-              id="name"
-              value={props.name}
-              onChange={handleChange}
-              className="popup__input popup__input_type_title"
-              name="name"
-              placeholder="Имя"
-              defaultValue=""
-              type="text"
-              minLength="2"
-              maxLength="40"
-              required
-            />
-            <span
-              id="name-error"
-              className="popup__input-error name-error"
-            ></span>
-            <input
-              id="about"
-              value={props.description}
-              onChange={handleChange}
-              className="popup__input popup__input_type_subtitle"
-              name="about"
-              placeholder="О себе"
-              defaultValue=""
-              type="text"
-              minLength="2"
-              maxLength="200"
-              required
-            />
-            <span
-              id="about-error"
-              className="popup__input-error about-error"
-            ></span>
-          </>*/
-
+  
 <div className={`popup popup_function_edit popup_type_light ${props.isOpen ? "popup_opened" : ""
     }`}>
 <div className="popup__container popup__container_size_small">
